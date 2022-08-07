@@ -1,4 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+                    /* Importando la fuente Poppins de Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+:root {
+    --hue: 207;
+    --sat: 90%;
+    --lig: 61%;
+    --body-color: hsl(var(--hue), 100%, 99%);
+    --container-color: hsl(var(--hue), 24%, 12%);
+    --first-color: hsl(var(--hue), var(--sat), var(--lig));
+}
+/* Css globales */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: hsl(var(--hue), 40%, 8%);
+        --text-color: #fff;
+        --box-shadow: 0  0 128px 0 rgba(255, 255, 255, 0.1), 0 32px 64px -48px rgba(255, 255, 255, 0.5);
+        --shadow-dark: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: hsl(var(--hue), 100%, 99%);
+        --text-color: rgb(0, 0, 0);
+        --box-shadow: 0  0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    }
+}
 
 * {
     margin: 0;
@@ -6,4 +34,104 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Css para el body */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+    padding: 0 10px;
+}
+
+/* Css para el contenedor principal */
+
+.container {
+    background: var(--bg-color);
+    color: var(--text-color);
+    max-width: 450px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Css para el formulario de registro */
+
+.form {
+    padding: 25px 30px;
+}
+
+.form header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form form {
+    margin: 20px 0;
+}
+
+.form form .error-txt {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #f5c6cb;
+}
+
+.form form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form form .field input {
+    outline: none;
+}
+
+.form form .field .input input {
+    height: 48px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form form .image input {
+    font-size: 17px;
+}
+
+.form form .button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size:  17px;
+    font-weight: 400;
+    background: var(--first-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-dark);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.form .link a {
+    color: var(--text-color);
+}
+
+.form .link a:hover {
+    text-decoration: underline;
 }
