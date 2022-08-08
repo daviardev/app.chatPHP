@@ -15,6 +15,7 @@
     :root {
         --bg-color: hsl(var(--hue), 40%, 8%);
         --text-color: #fff;
+        --border: #383838;
         --box-shadow: 0  0 128px 0 rgba(255, 255, 255, 0.1), 0 32px 64px -48px rgba(255, 255, 255, 0.5);
         --shadow-dark: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
     }
@@ -23,6 +24,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --bg-color: hsl(var(--hue), 100%, 99%);
+        --border: #ccc;
         --text-color: rgb(0, 0, 0);
         --box-shadow: 0  0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
     }
@@ -102,7 +104,7 @@ body {
     width: 100%;
     font-size: 16px;
     padding: 0 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     border-radius: 5px;
 }
 
@@ -143,7 +145,130 @@ body {
     position: absolute;
     right: 15px;
     top: 70%;
-    color: #ccc;
+    color: var(--border);
     transform: translateY(-40%);
     cursor: pointer;
+}
+
+/* Css de lista de usuarios */
+
+.users {
+    padding: 25px 30px;
+}
+
+.users header, .users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+.container img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+:is(.users, .users-list) .content {
+    display: flex;
+    align-items: center;
+}
+
+.users header .content img {
+    height: 50px;
+    width: 50px;
+}
+
+:is(.users, .users-list) .details {
+    color: var(--text-color);
+    margin-left: 15px;
+}
+
+:is(.users, .users-list) .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.users header .logout {
+    color: var(--text-color);
+    padding: 7px 15px;
+    font-size: 17px;
+    border-radius: .3rem;
+    background: var(--border);
+}
+
+.users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users .search .text {
+    font-size: 16px;
+}
+
+.users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 1px solid var(--text-color);
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    background: var(--border);
+    color: var(--text-color);
+    outline: none;
+}
+
+.users .search button {
+    width: 45px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: var(--border);
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+}
+
+.users-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.users-list a {
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: var(--border);
+}
+
+.users-list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .content img {
+    height: 40px;
+    width: 40px;
+}
+
+.users-list a .content p {
+    color: #67676a;
+}
+
+.users-list a .status-dot {
+    font-size: 12px;
+    color: #468669;
+}
+
+/* Se usa .offline para indicar en php que el usuario está desconectado */
+
+.users-list a .status-dot.offline {
+    color: #ccc;
 }
