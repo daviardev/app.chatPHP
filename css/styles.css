@@ -89,6 +89,7 @@ body {
 .form form .field {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin-bottom: 10px;
 }
 
@@ -134,4 +135,15 @@ body {
 
 .form .link a:hover {
     text-decoration: underline;
+}
+
+/* Css para el formulario de iniciar sesión */
+
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    top: 70%;
+    color: #ccc;
+    transform: translateY(-40%);
+    cursor: pointer;
 }
