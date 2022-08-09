@@ -20,7 +20,7 @@
                         <p>Activo ahora</p>
                     </div>
                 </div>
-                <a href="./login.html" class="logout">Cerrar sesión</a>
+                <a href="./login.php" class="logout">Cerrar sesión</a>
             </header>
             <div class="search">
                 <span class="text">Seleccionar un usuario para comenzar a charlar</span>

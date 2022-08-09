@@ -30,7 +30,7 @@
                 </div>
             </div>
             </form>
-            <div class="link">¿No tienes una cuenta? <a href="../index.html">Registrate</a> </div>
+            <div class="link">¿No tienes una cuenta? <a href="../index.php">Registrate</a> </div>
         </section>
     </div>
 </body>

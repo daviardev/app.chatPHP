@@ -42,7 +42,7 @@
                 </div>
             </div>
             </form>
-            <div class="link">¿Ya tienes una cuenta? <a href="./pages/login.html">Inicia sesión</a> </div>
+            <div class="link">¿Ya tienes una cuenta? <a href="./pages/login.php">Inicia sesión</a> </div>
         </section>
     </div>
 </body>
