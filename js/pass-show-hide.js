@@ -1,5 +1,5 @@
 const pswrdField = document.querySelector(".form input[type='password']"),
-toggleBtn = document.querySelector(".form .field i")
+toggleBtn = document.querySelector('.form .field i')
 
 // Funcionabilidad para ocultar y mostrar la contraseña
 toggleBtn.onclick = () => {
