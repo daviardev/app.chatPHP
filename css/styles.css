@@ -133,6 +133,14 @@ body {
     cursor: pointer;
 }
 
+/* Css para el ícono de mostrar y ocultar contraseña */
+
+.form form .field i.active::before {
+    color: var(--border);
+    content: '\f070';
+}
+
+
 /* Css de lista de usuarios */
 
 .users {
