@@ -13,29 +13,29 @@
     <div class="container">
         <section class="form signup">
             <header>Chat app online</header>
-            <form action="#">
-                <div class="error-txt">Mensaje de error</div>
+            <form action="#" enctype="multipart/form-data" >
+                <div class="error-txt"></div>
                 <div class="name-details">
                     <div class="field input">
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Nombre">
+                        <label>Nombres</label>
+                        <input type="text" name="fname" placeholder="Nombres" require >
                     </div>
                     <div class="field input">
-                        <label>Apellido</label>
-                        <input type="text" placeholder="Apellido">
+                        <label>Apellidos</label>
+                        <input type="text" name="lname" placeholder="Apellidos" require >
                 </div>
                 <div class="field input">
                     <label>Correo</label>
-                    <input type="text" placeholder="Correo">
+                    <input type="text" name="email" placeholder="Correo" require >
                 </div>
                 <div class="field input">
                     <label>Contraseña</label>
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña" require >
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field image">
                     <label>Seleccionar imagen de perfil</label>
-                    <input type="file">
+                    <input type="file" name="image" require >
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continuar">
@@ -47,4 +47,5 @@
     </div>
 </body>
 <script src="./js/pass-show-hide.js"></script>
+<script src="./js/signup.js"></script>
 </html>
