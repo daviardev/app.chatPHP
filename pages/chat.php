@@ -13,7 +13,7 @@
     <div class="container">
         <section class="chat-area">
             <header>
-                <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="./users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                     <img src="https://pps.whatsapp.net/v/t61.24694-24/291483763_3316118818675085_5448892912731441282_n.jpg?ccb=11-4&oh=01_AVwb7-i5KFLAFTlDymXx80gsZWD72NTnOYaX4eoCjctTgA&oe=62FE5905" alt="">
                     <div class="details">
                         <span>DevSilva</span>
