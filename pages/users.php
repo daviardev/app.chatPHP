@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2936/2936956.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Chat app online</title>
-</head>
+<?php
+    include_once "../php/config.php";
+    include_once "header.php";
+    session_start();
+    
+    if (!isset($_SESSION['unique_id'])) {
+        header("location: login.php"); //Sí el usuario no está logueado y trata de entrar, se devolverá a la página de login
+    }
+?>
 <body>
     <div class="container">
         <section class="users">
             <header>
+                <?php 
+                    $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+
+                    if (mysqli_num_rows($sql) > 0) {
+                        $row = mysqli_fetch_assoc($sql);
+                    }
+
+                ?>
                 <div class="content">
-                    <img src="https://pps.whatsapp.net/v/t61.24694-24/291483763_3316118818675085_5448892912731441282_n.jpg?ccb=11-4&oh=01_AVwb7-i5KFLAFTlDymXx80gsZWD72NTnOYaX4eoCjctTgA&oe=62FE5905" alt="">
+                    <img src="../php/images/<?php echo $row['img'] ?>">
                     <div class="details">
-                        <span>DevSilva</span>
-                        <p>Activo ahora</p>
+                        <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
+                        <p><?php echo $row['status'] ?></p>
                     </div>
                 </div>
-                <a href="./login.php" class="logout">Cerrar sesión</a>
+                <a href="login.php" class="logout">Cerrar sesión</a>
             </header>
             <div class="search">
                 <span class="text">Seleccionar un usuario para comenzar a charlar o búscalo</span>
@@ -30,7 +36,7 @@
             <div class="users-list">
                 <a href="#">
                     <div class="content">
-                        <img src="https://yt3.ggpht.com/ytc/AMLnZu_YWCL0jHWRbGczKlKQv3JI6hnQdZC3wtqnj1Xtdw=s900-c-k-c0x00ffffff-no-rj" alt="">
+                        <img src="https://yt3.ggpht.com/ytc/AMLnZu-wr7WD3_h-sCyGhrrmeLTzcE9_yqURLBUK4G6ypw=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
                         <div class="details">
                         <span>Fernanfloo</span>
                         <p>Te apetece grabar?</p>
