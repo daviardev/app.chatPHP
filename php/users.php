@@ -8,20 +8,7 @@
     if (mysqli_num_rows($sql) == 1) {
         $output .= "No hay contactos disponibles.";
     } elseif (mysqli_num_rows($sql) > 0) {
-        while ($row = mysqli_fetch_assoc($sql)) {
-            $output .= '
-            <a href="#">
-                <div class="content">
-                    <img src="../php/images/'.$row['img'].'" alt="">
-                    <div class="details">
-                    <span>'. $row['fname']. " ". $row['lname'] .'</span>
-                    <p>Te apetece grabar?</p>
-                    </div>
-                </div>
-                <div class="status-dot"><i class="fas fa-circle"></i></div>
-            </a>
-        ';
-        }
+      include "data.php";
     }
     echo $output;
 ?>
