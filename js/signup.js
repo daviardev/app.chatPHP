@@ -16,7 +16,9 @@ continueBtn.onclick = () => {
                 let data = xhr.response;
                 
                 if (data == "success") {
-                    
+                    // redirect to users.php page
+                    location.href = "pages/users.php";
+
                 } else {
                     errorTxt.textContent = data
                     errorTxt.style.display = "block"
