@@ -14,15 +14,15 @@
         <section class="form login">
             <header>Chat app online</header>
             <form action="#">
-                <div class="error-txt">Mensaje de error</div>
+                <div class="error-txt"></div>
                 <div class="name-details">
                 <div class="field input">
                     <label>Correo</label>
-                    <input type="text" placeholder="Correo">
+                    <input type="text" name="email" placeholder="Correo">
                 </div>
                 <div class="field input">
                     <label>Contraseña</label>
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
@@ -35,4 +35,5 @@
     </div>
 </body>
 <script src="../js/pass-show-hide.js"></script>
+<script src="../js/login.js"></script>
 </html>
