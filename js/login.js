@@ -8,22 +8,20 @@ form.onsubmit = (event) => {
 
 continueBtn.onclick = () => {
     let xhr = new XMLHttpRequest()
-    xhr.open("POST", "../php/login.php", true);
+    xhr.open("POST", "../php/login.php", true)
 
     xhr.onload = () => {
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
-                let data = xhr.response;
+                let data = xhr.response
                 console.log(data)
-                
-                // if (data == "success") {
-                //     // redirect to users.php page
-                //     location.href = "pages/users.php";
-
-                // } else {
-                //     errorTxt.textContent = data
-                //     errorTxt.style.display = "block"
-                // }
+                if (data == "success") {
+                    // redirect to users.php page
+                    location.href = "users.php"
+                } else {
+                    errorTxt.style.display = "block"
+                    errorTxt.textContent = data
+                }
             }
         }
     }
