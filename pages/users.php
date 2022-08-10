@@ -23,7 +23,7 @@
                 <a href="./login.php" class="logout">Cerrar sesión</a>
             </header>
             <div class="search">
-                <span class="text">Seleccionar un usuario para comenzar a charlar</span>
+                <span class="text">Seleccionar un usuario para comenzar a charlar o búscalo</span>
                 <input type="text" placeholder="Introduzca el nombre del usuario">
                 <button><i class="fas fa-search"></i></button>
             </div>
