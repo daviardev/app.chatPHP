@@ -7,5 +7,5 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2936/2936956.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Chat app online</title>
+    <title>App chatline</title>
 </head>

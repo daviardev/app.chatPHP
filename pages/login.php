@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <section class="form login">
-            <header>Chat app online</header>
+            <header>App chatline</header>
             <form action="#">
                 <div class="error-txt"></div>
                 <div class="name-details">

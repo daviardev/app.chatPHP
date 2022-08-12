@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <section class="form signup">
-            <header>Chat app online</header>
+            <header>App chatline</header>
             <form action="#" enctype="multipart/form-data" autocomplete="off" >
                 <div class="error-txt"></div>
                 <div class="name-details">
