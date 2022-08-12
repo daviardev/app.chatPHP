@@ -37,6 +37,6 @@
             echo $output;
         }
     } else {
-        header("../pages/login.php");
+        header("location: ../pages/login.php");
 }
 ?>
