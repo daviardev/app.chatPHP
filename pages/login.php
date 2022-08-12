@@ -1,5 +1,10 @@
-<?php 
+<?php
+    session_start();
     include_once "header.php";
+
+    if (isset($_SESSION['unique_id'])) {
+        header("location: ./pages/users.php");
+    }
 ?>
 <body>
     <div class="container">
